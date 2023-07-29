@@ -115,7 +115,7 @@
                 <div class="portfolioLayer">
                     <h4>Snake game</h4>
                     <p>It's the time for little fun. It is a classic snake game for refreshment. You have to use arrow keys to direct the snake. Then eventually eat the food, increaset the snake length and beat the high score. The movement of snake increases as time passes.</p>
-                    <p>Snake game for Android is Comming Soon.</p>
+                    
                     <a href="https://bisai20i.github.io/snakegame"><i class='bx bx-link-external' ></i></a>
                 </div>
             </div>
@@ -125,6 +125,15 @@
                     <h4>Web site for a Institute</h4>
                     <p>This is a sample project of website of a institute. Explore this website to find features of it.</p>
                     <a href="https://bisai20i.github.io/littlebells"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+            <div class="portfolioBox">
+                <img src="images/portfolio3.png" alt="" height="400" width="500">
+                <div class="portfolioLayer">
+                    <h4>Snake game Mobile</h4>
+                    <p>It's the time for little fun. It is a classic snake game for refreshment. Its for Mobile Devices.</p>
+                    
+                    <a href="https://bisai20i.github.io/snakegame"><i class='bx bx-link-external' ></i></a>
                 </div>
             </div>
         </div>
@@ -138,7 +147,7 @@
             <div class="contact1">
                 <h4>You can <span>contact me</span> Via</h4>
                 <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjfvNQQmWTCLtMQRpTZkvlqsjfRFwFZcdcHHrzSwXzFZBpCKQbqWGVXxxthgBBrmmMrxGV"><i class='bx bxl-gmail' ></i><p>xettri.bsai@gmail.com</p></a>
-                <a href="#"><i class='bx bxs-phone' ></i> <p>+977 9846200565</p></a>
+                <a onclick="redirectToPhoneApp()"><i class='bx bxs-phone' ></i> <p>+977 9846200565</p></a>
                 <a href="https://www.facebook.com/profile.php?id=100016363269489"><i class='bx bxl-facebook-circle'></i> <p>facebook</p></a>
                 <a href="https://web.whatsapp.com/"><i class='bx bxl-whatsapp' ></i> <p>Whatsapp</p></a>
 
@@ -218,6 +227,15 @@
         form.reset()})
         .catch(error => console.error('Error!', error.message))
     })
+  </script>
+
+  <script>
+function redirectToPhoneApp() {
+  const phoneNumber = '+9779846200565'; 
+  const phoneUrl = `tel:${phoneNumber}`;
+
+  window.location.href = phoneUrl;
+    }
   </script>
 </body>
 </html>
