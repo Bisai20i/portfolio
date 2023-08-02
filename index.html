@@ -149,7 +149,7 @@
                 <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjfvNQQmWTCLtMQRpTZkvlqsjfRFwFZcdcHHrzSwXzFZBpCKQbqWGVXxxthgBBrmmMrxGV"><i class='bx bxl-gmail' ></i><p>xettri.bsai@gmail.com</p></a>
                 <a onclick="redirectToPhoneApp()"><i class='bx bxs-phone' ></i> <p>+977 9846200565</p></a>
                 <a href="https://www.facebook.com/profile.php?id=100016363269489"><i class='bx bxl-facebook-circle'></i> <p>facebook</p></a>
-                <a href="https://web.whatsapp.com/"><i class='bx bxl-whatsapp' ></i> <p>Whatsapp</p></a>
+                <a onclick="redirectToWhatsApp(9846200565)"><i class='bx bxl-whatsapp' ></i> <p>Whatsapp</p></a>
 
             </div>
             <div class="contact2">
@@ -236,6 +236,13 @@ function redirectToPhoneApp() {
 
   window.location.href = phoneUrl;
     }
+
+    function redirectToWhatsApp(phoneNumber) {
+    const whatsappUrl = `whatsapp://send?phone=${phoneNumber}`;
+
+    window.location.href = whatsappUrl;
+    }
+
   </script>
 </body>
 </html>
