@@ -399,7 +399,7 @@ span{
         padding:2rem 3%;
     }
     .contact .contactContents{
-        margin-top: 20px;
+        margin: 20px 25px 0 25px;
         grid-template-columns: repeat(1,1fr);
     }
     .contact1 a{
@@ -496,4 +496,57 @@ span{
     .footer .footerText p{
         font-size: 12px;
     }
+}
+
+@media (max-width: 400px){
+    .contact .contactContents{
+        margin: 20px 10px 0 10px;
+        font-size: 14px;
+    }
+    .contact2 input,textarea{
+        margin: 8px;
+    }
+    .contact1{
+        display: block;
+        text-align: center;
+        padding: 15px 6px;
+        border-radius: 10px;
+        border: 2px solid var(--main-color);
+        box-shadow: 0 0 1rem var(--main-color);
+    }
+    .contact1 h1{
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+    .contact1 a{
+        display: flex;
+        margin: 8px 8px;
+        justify-content: left;
+        font-size: 14px;
+        padding: 3px;
+    }
+    .contact1 a i{
+        font-size: 12px;
+    }
+    .contact2{
+        padding: 15px 6px;
+        
+    }
+    .contact2 input,textarea{
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        margin: 8px 5px;
+        width: 90%;
+    }
+    .contact2 .btn{
+        margin-top: 10px;
+    }
+    .footer .footerText p{
+        font-size: 10px;
+    }
+    .footer .iconTop a i{
+        font-size: 14px;
+    }
+    
 }
