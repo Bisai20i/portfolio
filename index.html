@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Welcome to the official website of Bisai Chhetri, an ambitious BSc.CSIT student from Pokhara, Nepal. Explore Bisai's achievements, experiences, and professional journey. Stay updated with the latest news and insights. Connect with Bisai for a glimpse into a world of innovation and excellence.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="animation.css">
     <link rel="icon" href="images/logo.png">
-    <link rel="canonical" href="https://bisai20i.github.io/portfolio/">
-
     <title>Portfolio</title>
 </head>
 <body>
@@ -30,15 +28,20 @@
         <div class="homeContent">
             <h3>Myself,</h3>
             <h1>Bisai Chhetri</h1>
-            <h3>And I am  <span>currently studying</span></h3>
+            <div class="holder"><h3>And I am a </h3><ul class="typewriter">
+                <li><span>FULLSTACK DEVELOPER</span></li>
+                <li><span>GRAPHIC DESIGNER</span></li>
+                <li><span>FREELANCER</span></li>
+                
+            </ul>
+            </div>
             <p>Ambitious BSc.CSIT student from Pokhara, Nepal, skilled in JavaScript, C, C++, QBASIC, data entry, and graphic designing, eager to excel in the dynamic field of technology.</p>
             <div class="socialMedia">
-                <a href="https://www.facebook.com/profile.php?id=100016363269489" aria-label="Facebook"><i class='bx bxl-facebook-circle' ></i></a>
-                <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjfvNQQmWTCLtMQRpTZkvlqsjfRFwFZcdcHHrzSwXzFZBpCKQbqWGVXxxthgBBrmmMrxGV" aria-label="Gmail"><i class='bx bxl-gmail' ></i></a>
-                <a href="https://web.telegram.org/k/#@Twantyi" aria-label="Telegram"><i class='bx bxl-telegram'></i></a>
-
+                <a href="https://www.facebook.com/profile.php?id=100016363269489"><i class='bx bxl-facebook-circle' ></i></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjfvNQQmWTCLtMQRpTZkvlqsjfRFwFZcdcHHrzSwXzFZBpCKQbqWGVXxxthgBBrmmMrxGV"><i class='bx bxl-gmail' ></i></a>
+                <a href="https://web.telegram.org/k/#@Twantyi"><i class='bx bxl-telegram'></i></a>
             </div>
-            <a href="CV.png" download class="btn" aria-label="Download CV">Download CV</a>
+            <a href="CV.png" download class="btn">Download CV</a>
         </div>
         <div class="homeImg">
             <img src="images/home1-min.png" alt="">
@@ -47,17 +50,75 @@
 
 
     <!--about section design-->
-    <section class="about" id="about">
-        <div class="aboutImg">
-            <img src="images/home.png" alt="">
+    <section id="about">
+        <div class="about">
+            <div class="aboutImg">
+                <img src="images/home.png" alt="">
+            </div>
+            <div class="aboutContent">
+                <h2 class="heading" >About <span> Me</span></h2>
+                <h3>Front End Developer</h3>
+                <p>I am a dedicated and ambitious student pursuing my BSc.CSIT degree at Trubhuvan University, and I proudly call the charming city of Pokhara, Nepal, my home. With a keen interest in technology, I have cultivated a diverse skill set that includes proficiency in JavaScript, C, C++, and QBASIC, enabling me to tackle programming challenges with confidence. Moreover, I possess valuable talents in data entry and graphic designing, which allow me to explore various creative avenues. Eager to learn and passionate about innovation, I am constantly seeking new opportunities to expand my knowledge and expertise in the ever-evolving field of computer science and information technology. With a strong foundation and a hunger for growth, I am excited to embrace the future and make a meaningful contribution to the world of technology.</p>
+                <button onclick="document.getElementById('moreInfoSection').style.height='auto'" class="btn">Read More</button>
+                
+            </div>
         </div>
-        <div class="aboutContent">
-            <h2 class="heading">About <span> Me</span></h2>
-            <h3>Front End Developer</h3>
-            <p>I am a dedicated and ambitious student pursuing my BSc.CSIT degree at Tribhuvan University, and I proudly call the charming city of Pokhara, Nepal, my home. With a keen interest in technology, I have cultivated a diverse skill set that includes proficiency in JavaScript, C, C++, and QBASIC, enabling me to tackle programming challenges with confidence. Moreover, I possess valuable talents in data entry and graphic designing, which allow me to explore various creative avenues. Eager to learn and passionate about innovation, I am constantly seeking new opportunities to expand my knowledge and expertise in the ever-evolving field of computer science and information technology. With a strong foundation and a hunger for growth, I am excited to embrace the future and make a meaningful contribution to the world of technology.</p>
-            <a href="#" class="btn">Read More</a>
+        <div id="moreInfoSection">
+            <h2 class="heading" style="text-align: center;">More <span>Information</span></h2>
+            <div id="moreInfo">
+            <div class="personalInfo">
+                <h3 style="text-align: center; padding: 10px 0px; "><span>Personal</span> Information</h3>
+                <hr style="border: 1px solid white; margin-bottom: 5px;">
+                <article>
+                    <p>Religion : </p>
+                    <span>Hindu</span>
+                </article>
+                <article>
+                    <p>Nationality : </p>
+                    <span>Nepali</span>
+                </article>
+                <article>
+                    <p>Temporary Address : </p>
+                    <span>Pokhara-29, Kaski</span>
+                </article>
+                <article>
+                    <p>Permanent Address : </p>
+                    <span>Phalewas-8, Parbat</span>
+                </article>
+                <article>
+                    <p>License : </p>
+                    <span>2-Wheelers (A)</span>
+                </article>
+                <article>
+                    <p>Education : </p>
+                    <span>Bachelors (CSIT)</span>
+                </article>
+            </div>
+            <div class="skills">
+                <h3 style="padding: 10px 0px;">Skills</h3>
+                <hr style="border: 1px solid white; margin-bottom: 10px;">
+                <article>
+                    <p><strong>HTML & CSS</strong> <span>95%</span></p>
+                    <div class="progresscontainer"><aside class="progressbar" data-progress="95"></aside></div>            </article>
+                <article>
+                    <p><strong>JavaScript</strong> <span>90%</span></p>
+                    <div class="progresscontainer"><aside class="progressbar" data-progress="90"></aside></div>            </article>
+                <article>
+                    <p><strong>React</strong> <span>75%</span></p>
+                    <div class="progresscontainer"><aside class="progressbar" data-progress="75"></aside></div>            </article>
+                <article>
+                    <p><strong>Laravel</strong> <span>82%</span></p>
+                    <div class="progresscontainer"><aside class="progressbar" data-progress="82"></aside></div>            </article>
+                <article>
+                    <p><strong>Photoshop and Illustrator</strong> <span>84%</span></p>
+                    <div class="progresscontainer"><aside class="progressbar" data-progress="84"></aside></div>
+                </article>
+            </div>
+            </div>
+            <div style="text-align: center; padding: 20px 0 0 10px"><button onclick="document.getElementById('moreInfoSection').style.height = '0'" class="btn">Read Less</button></div>
         </div>
     </section>
+    
 
     <!--services section design-->
     <section class="services" id="services">
@@ -191,7 +252,13 @@
 
 
 
-
+    <script>
+        let progressbars = document.querySelectorAll('.progressbar')
+        progressbars.forEach(bar=>{
+           let progress = bar.getAttribute('data-progress')+'%'
+           bar.style.width = progress;
+        })
+    </script>
     <script>
         let sections= document.querySelectorAll('section');
         let navLinks = document.querySelectorAll('header nav a');
@@ -243,35 +310,19 @@
   </script>
 
   <script>
-function redirectToPhoneApp() {
-  const phoneNumber = '+9779846200565'; 
-  const phoneUrl = `tel:${phoneNumber}`;
+    function redirectToPhoneApp() {
+        const phoneNumber = '+9779846200565'; 
+        const phoneUrl = `tel:${phoneNumber}`;
 
-  window.location.href = phoneUrl;
+        window.location.href = phoneUrl;
     }
 
     function redirectToWhatsApp(phoneNumber) {
-    const whatsappUrl = `whatsapp://send?phone=${phoneNumber}`;
+        const whatsappUrl = `whatsapp://send?phone=${phoneNumber}`;
 
-    window.location.href = whatsappUrl;
+        window.location.href = whatsappUrl;
     }
 
   </script>
-    <script type="application/ld+json">
-   {
-     "@context": "http://schema.org",
-     "@type": "Person",
-     "name": "Bisai Chhetri",
-     "jobTitle": "BSc.CSIT Student",
-     "address": {
-       "@type": "PostalAddress",
-       "addressLocality": "Pokhara",
-       "addressRegion": "Gandaki",
-       "addressCountry": "Nepal"
-     },
-     "email": "xettri.bsai@gmail.com"
-   }
-</script>
-
 </body>
 </html>

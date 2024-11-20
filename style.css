@@ -21,9 +21,17 @@ body{
     background:var(--bg-color);
     color:white;
 }
+img{
+    animation: slideImg linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
 section{
     min-height: 100vh;
     padding: 10rem 9% 2rem;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 25%;
 }
 .header{
     position:fixed;
@@ -75,6 +83,7 @@ section{
 
 }
 span{
+
     color: var(--main-color);
 }
 .homeContent h1{
@@ -109,7 +118,7 @@ span{
 }
 .btn{
     display: inline-block;
-    
+    cursor: pointer;
     padding:  1rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
@@ -119,6 +128,7 @@ span{
     letter-spacing:  .1rem;
     font-weight: 600;
     transition: .5s ease;
+    
 }
 .btn:hover{
     box-shadow: none;
@@ -126,13 +136,15 @@ span{
 
 
 
-
+#about{
+    background: var(--second-bg-color);
+}
 .about{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background: var(--second-bg-color);
+    
 }
 .aboutImg{
     display:flex;
@@ -141,6 +153,7 @@ span{
     width:35vw; 
     margin-right: 4rem;
 }
+
 .heading{
     font-size: 4rem;
 }
@@ -154,10 +167,74 @@ span{
 .aboutContent p{
     font-size: 1.6rem;
     margin: 2rem 0;
-
+}
+#moreInfoSection{
+    transition: 0.5s ease;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+}
+#moreInfo{
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 15px;
+    
+}
+.personalInfo, .skills{
+    padding: 20px;
+    box-shadow: 0 0 0.5rem white;
+    flex: 1;
+    border-radius: 15px;
+    font-size: 1.6rem;
 }
 
+.personalInfo article{
+    display: flex;
+    font-weight: 550;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 0;
+    width: 100%;
+}
+.personalInfo article p{
+    flex:1;
+    text-align: right;
+}
+.personalInfo article span{
+    flex: 1;
+    text-align: left;
 
+}
+.skills article{
+    margin-top: 10px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border-left: 5px solid var(--main-color);
+    background-color: var(--bg-color);
+}
+.skills article p{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    
+    justify-content: space-between;
+}
+.progresscontainer{
+    margin: 2px 0px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--second-bg-color);
+}
+.skills article .progressbar{
+    border-radius: 5px;
+    height: 10px;
+    background: linear-gradient(white, var(--main-color));
+}
 
 
 
@@ -275,26 +352,30 @@ span{
 .contact .contactContents{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 2rem;
+    grid-gap: 2.5rem;
     margin-top: 3rem;
     font-size: 18px;
 
 }
 .contact h2{
+    padding-bottom: 10px;
     text-align: center;
 }
-.contact1{
+.contact1, .contact2{
     display: block;
     text-align: center;
-    padding: 20px;
+    padding: 20px ;
     border-radius: 10px;
     border: 2px solid var(--main-color);
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: 0 0 0.8rem var(--main-color);
+}
+.contact1 h4{
+    padding: 10px 0px;
 }
 .contact1 a{
     display: flex;
     margin: 5px 10px;
-    padding-left: 20px;
+    padding: 5px 10px;
     justify-content: left;
     align-items: center;
     font-size: 15px;
@@ -308,7 +389,8 @@ span{
     transition: .8s;
 }
 .contact1 a p:hover{
-    box-shadow: 0 0 1rem white;
+    color: var(--main-color);
+    cursor: pointer;
 }
 .contact1 i{
     color: var(--main-color);
@@ -321,25 +403,22 @@ span{
 }
 .contact1 i:hover{
     color: white;
-    box-shadow: 0 0 1rem white;
+    box-shadow: none;
+    cursor: pointer;
 }
-.contact2{
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid var(--main-color);
-    box-shadow: 0 0 1rem var(--main-color);
-}
+
 .contact2 input,textarea{
     color: white;
     background-color: var(--second-bg-color);
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 5px;
     border: none;
-    margin: 10px 15px;
+    margin: 15px 10px;
     width: 90%;
 }
-
+.contact2 input:focus, textarea:focus{
+    outline: 2px solid var(--main-color);
+}
 
 
 
@@ -382,13 +461,13 @@ span{
 }
 
 
-@media(max-width : 1200px){
+@media (max-width : 1200px){
     html{
         font-size:55%;
     }
     
 }
-@media(max-width:991px){
+@media (max-width:991px){
     .header{
         padding: 2rem 3%;
     }
@@ -399,22 +478,22 @@ span{
         padding:2rem 3%;
     }
     .contact .contactContents{
-        margin: 20px 25px 0 25px;
+        margin: 20px 10px;
         grid-template-columns: repeat(1,1fr);
     }
     .contact1 a{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 15px 0;
     }
     .contact2{
         margin-top: 20px;
+        padding: 25px 10px;
     }
     .contact2 input,textarea{
-        margin: 15px;
+        margin: 10px;
         
     }
 }
-@media(max-width: 768px){
+@media (max-width: 768px){
     #menu{
         display:block;
     }
@@ -473,10 +552,15 @@ span{
     .portfolioContainer{
         grid-template-columns: 1fr;
     }
+    .personalInfo, .skills{
+        min-width: 100%;
+        font-size: 1.4rem;
+        padding: 15px;
+    }
 }
 
 
-@media(max-width: 600px){
+@media (max-width: 600px){
     .services {
         text-align: center;
     }
@@ -496,11 +580,14 @@ span{
     .footer .footerText p{
         font-size: 12px;
     }
+    .moreInfoSection h2{
+        font-size: 2.8rem;
+    }
 }
 
-@media(max-width: 400px){
+@media (max-width: 400px){
     .contact .contactContents{
-        margin: 20px 10px 0 10px;
+        margin: 20px 8px;
         font-size: 14px;
     }
     .contact2 input,textarea{
@@ -533,11 +620,11 @@ span{
         
     }
     .contact2 input,textarea{
-        padding: 5px;
+        padding: 8px 12px;
         border-radius: 5px;
         border: none;
-        margin: 8px 5px;
-        width: 90%;
+        margin: 8px 0px;
+        width: 95%;
     }
     .contact2 .btn{
         margin-top: 10px;

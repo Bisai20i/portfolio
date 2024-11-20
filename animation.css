@@ -1,0 +1,87 @@
+:root{
+    --bg-color:#202328;
+    --second-bg-color: #2c322c;
+    --main-color: #09b523;
+}
+.holder{
+    display: inline-flex;
+    align-items: center;
+}
+.typewriter{
+    margin-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.typewriter li{
+    font-size:3rem;
+    font-weight: 600;
+    
+    top:0;
+    white-space: nowrap;
+    list-style: none;
+    position: relative;
+    animation: slide 12s steps(3) infinite;
+}
+.typewriter li span{
+    position: relative;
+}
+.typewriter li span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--main-color);
+    animation: typing 4s steps(19) infinite, blink .3s infinite step-end alternate;
+}
+
+@keyframes slide{
+    100%{
+        top:-90px;
+    }
+}
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+    
+}
+
+/* @keyframes slideBtn {
+    from{
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+} */
+
+@media (max-width: 768px){
+    .holder{
+        display: block;
+    }
+    .typewriter li{
+        font-size: 2.2rem;
+    }
+}
